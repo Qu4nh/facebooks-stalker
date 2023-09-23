@@ -28,9 +28,11 @@ if os.path.exists(input_file_path):
         index += len(buddy_id)
         count += 1
 
+    # Tạo cửa sổ
+    
     root = tk.Tk()
     root.withdraw()
-
+    
     for i, buddy in enumerate(result_list):
         answer = messagebox.askyesno("Count stalker (@Qu4nh)", f"Mở profile người #{i+1}\n\n") # Mở cửa sổ
         if not answer:
