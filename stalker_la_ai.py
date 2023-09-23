@@ -8,7 +8,7 @@ input_file_path = os.path.join(current_directory, 'input.txt')
 
 # Input
 
-if os.path.exists(input_file_path):
+if os.path.exists(input_file_path) and os.path.getsize(input_file_path) > 0:
     with open(input_file_path, encoding='utf-8') as file:
         content = file.read()
 
@@ -32,15 +32,13 @@ if os.path.exists(input_file_path):
     
     root = tk.Tk()
     root.withdraw()
-<<<<<<< HEAD
     root.wm_attributes("-topmost", 1) 
-=======
->>>>>>> 3c0c870a741a2426115ecfa9cb02562d9c85bb2b
     
     for i, buddy in enumerate(result_list):
         answer = messagebox.askyesno("Count stalker (@Qu4nh)", f"Mở profile người #{i+1}\n\n") # Mở cửa sổ
         if not answer:
             break  # Đóng cửa sổ
         webbrowser.open(f"https://www.facebook.com/{buddy}")
+    pass
 else:
-    print("Không tìm thấy tệp 'input.txt' trong thư mục hiện tại.")
+    messagebox.showinfo("Thông báo", "Tệp 'input.txt' không tồn tại hoặc trống. \nHãy đọc kĩ README")
