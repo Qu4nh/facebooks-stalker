@@ -1,5 +1,5 @@
 # facebooks-stalker
-**Hướng dẫn sử dụng**
+**Hướng dẫn sử dụng** _(cần có python trong máy)_
 - Đầu tiên hãy vào profile của bạn
 https://www.facebook.com/profile.php?=75816879 (đây là profile của bạn)
 
