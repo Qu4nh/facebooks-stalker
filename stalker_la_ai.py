@@ -32,7 +32,10 @@ if os.path.exists(input_file_path):
     
     root = tk.Tk()
     root.withdraw()
+<<<<<<< HEAD
     root.wm_attributes("-topmost", 1) 
+=======
+>>>>>>> 3c0c870a741a2426115ecfa9cb02562d9c85bb2b
     
     for i, buddy in enumerate(result_list):
         answer = messagebox.askyesno("Count stalker (@Qu4nh)", f"Mở profile người #{i+1}\n\n") # Mở cửa sổ
