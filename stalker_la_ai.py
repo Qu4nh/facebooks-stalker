@@ -41,8 +41,5 @@ if os.path.exists(input_file_path) and os.path.getsize(input_file_path) > 0:
         webbrowser.open(f"https://www.facebook.com/{buddy}")
     pass
 else:
-<<<<<<< HEAD
     messagebox.showinfo("Thông báo", "Tệp 'input.txt' không tồn tại hoặc trống. \nHãy đọc kĩ README")
-=======
     print("Không tìm thấy tệp 'input.txt' trong thư mục hiện tại.")
->>>>>>> 6e4357675dec1c2c61752540e2f34e23856a5092
