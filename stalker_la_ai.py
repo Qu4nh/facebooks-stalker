@@ -6,6 +6,8 @@ import webbrowser
 current_directory = os.path.dirname(os.path.abspath(__file__))
 input_file_path = os.path.join(current_directory, 'input.txt')
 
+# Input
+
 if os.path.exists(input_file_path):
     with open(input_file_path, encoding='utf-8') as file:
         content = file.read()
@@ -15,6 +17,8 @@ if os.path.exists(input_file_path):
     index = 0
     result_list = []
 
+    # Đếm và đẩy vào mảng
+    
     while index < len(content):
         index = content.find(buddy_id, index)
         if index == -1:
@@ -28,9 +32,9 @@ if os.path.exists(input_file_path):
     root.withdraw()
 
     for i, buddy in enumerate(result_list):
-        answer = messagebox.askyesno("Count stalker (@Qu4nh)", f"Mở profile người #{i+1}\n\n")
+        answer = messagebox.askyesno("Count stalker (@Qu4nh)", f"Mở profile người #{i+1}\n\n") # Mở cửa sổ
         if not answer:
-            break  # Đóng cửa sổ nếu chọn "No"
+            break  # Đóng cửa sổ
         webbrowser.open(f"https://www.facebook.com/{buddy}")
 else:
     print("Không tìm thấy tệp 'input.txt' trong thư mục hiện tại.")
