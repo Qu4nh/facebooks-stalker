@@ -42,4 +42,3 @@ if os.path.exists(input_file_path) and os.path.getsize(input_file_path) > 0:
     pass
 else:
     messagebox.showinfo("Thông báo", "Tệp 'input.txt' không tồn tại hoặc trống. \nHãy đọc kĩ README")
-    print("Không tìm thấy tệp 'input.txt' trong thư mục hiện tại.")
